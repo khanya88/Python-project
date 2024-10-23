@@ -7,15 +7,14 @@ The dataset consists of transaction records, where each transaction is labeled a
 
 Amount: The transaction amount.
 IsFraud: A binary indicator of whether the transaction is fraudulent (1) or not (0).
+
 Data Cleaning Process
 Loading the Dataset: The dataset was loaded into a Pandas DataFrame.
 Missing Values Check: The analysis identified any missing values across columns.
-python
 print("\nMissing values in each column:")
 print(df.isnull().sum())
 
 Removing Duplicates: Duplicate entries were removed to ensure data integrity.
-python
 df = df.drop_duplicates()
 
 Forward Filling Missing Values: Any remaining missing values were filled using the forward fill method.
